@@ -1,71 +1,33 @@
-# 8.3-alpha — Blocco 1
-Base: ZIP 8.2 originale, copia separata. Nessuna pubblicazione.
+# Il mondo creativo di Teresa — 8.3-beta
 
-| Punto | Stato | Intervento e limite |
-|---|---|---|
-| 1 | Fatto nel codice | Manifest e icone originali recuperati dal primo pacchetto; icona maskable aggiunta; cache accessori facoltativa. Offline reale da verificare. |
-| 2 | Fatto nel codice | Nessuna aggiunta di stelle; attività con istruzioni o età singola lasciate intatte. Differenziazione avanzata rinviata al blocco 2. |
-| 3 | Parziale | Prime 48 schede, altre 48 a richiesta, ricerca ritardata 300 ms, cuore aggiornato senza ricostruzione. Mostra altre ricostruisce le schede già visibili; rimozione da preferiti non riempie automaticamente lo spazio liberato. |
-| 4 | Fatto nel codice | Pulizia afterprint e timeout 180 secondi; messaggio durante preparazione. Stampa mobile da verificare. |
-| 5 | Fatto nel codice | File PNG/PDF preparati prima del tocco; share chiamato direttamente, download alternativo. Salvataggio effettivo dipende dal browser; non viene dichiarato completato. |
-| 6 | Fatto nel codice | Caricamento immagini tramite onload/onerror, senza decode. |
-| 7 | Parziale | Fallback overlay sui dialog esistenti con chiusura e focus iniziale; non implementato isolamento completo del focus e dello sfondo. |
+Base: **8.3-alpha4** presa dal repository ufficiale in sola lettura (cache `teresa-v83-alpha4`).
+Lavoro svolto su una copia isolata. Il repository ufficiale non è stato modificato e non è stato pubblicato nulla.
+Cache del service worker: `teresa-v83-beta`.
 
-Punti 8–26: non affrontati, riservati ai blocchi successivi. Versioni visibili legacy non uniformate (punto 13). Chiavi localStorage e schema IndexedDB invariati; migrazione reale non verificata. Nessuna nuova libreria o servizio.
+| # | Richiesta | Stato | Cosa è cambiato |
+|---|---|---|---|
+| 1 | Differenziazione reale 3/4/5 anni | Fatto | Le schede vengono generate per l'età scelta, non ritoccate dopo. Tratto 6,5 / 4,5 / 3,25. Conta: 1–3 / 3–5 / 5–10 figure. Coppie: 2 / 3 / 4. Intruso tra 3 / 5 / 6. Sequenze AB / AB-AAB-ABB / ABC-AAB-ABB. Percorsi: una strada semplice / onde e zig-zag / curve, gradini e riccioli. Grande e piccolo: 2 / 3 / 4 misure (a 5 anni si numerano). Linee da ripassare: 1 / 3 / 4. Schede "per età": a 5 anni la lettera iniziale da ripassare. Ritaglia e Ripassa il contorno restano per 4–5 anni. Le 1.000 cornici cambiano solo per tratto e numero di decorazioni (4 / 8 / 12). |
+| 2 | Giochi migliorati, risposte deterministiche | Fatto | Posizione della risposta giusta nei conteggi e dell'intruso variabile, ma fissa per ogni scheda (seme ricavato dall'ID e dall'età). Coppie con colonna destra mescolata e punti di partenza/arrivo per la linea. Sequenze con 2–3 scelte in basso invece di "disegna". Tolti i puntini inutili al centro. |
+| 3 | Anteprima di stampa adattata allo schermo | Fatto | Finestra a tutta altezza: pagina intera visibile, comandi sempre visibili in basso, pulsanti − / Adatta / +. Con lo zoom si può scorrere. Su PC e tablet le opzioni stanno a destra. Sul telefono sono chiuse in "⚙ Opzioni" e si aprono a richiesta, così il foglio occupa quasi tutto lo schermo. Risoluzione di stampa invariata (A4 a 1240×1754, A5 a 1754×1240). Anche il visualizzatore mostra la scheda intera. |
+| 4 | PNG, condivisione, date | Fatto | "⬇ PNG" scarica un'immagine di 1600 px (su iPhone usa il pannello di condivisione). "↗ Link" e "↗" sulle schede condividono il link `?scheda=<ID>` (funzionano anche i vecchi link numerici). Data stampata come "Data: 25/11/2026". |
+| 5 | ID permanenti e migrazione preferiti | Fatto | 3.150 ID univoci, indipendenti dai titoli (es. `mot-14-ripassa-il-contorno`). Alla prima apertura gli indici di `teresa-fav` vengono convertiti nella nuova chiave `teresa-favorites`. Copia di sicurezza in `teresa-fav-v82`. `teresa-fav` resta intatta: tornando alla alpha4 i vecchi preferiti ci sono ancora. Indici senza corrispondenza conservati in `teresa-fav-unmapped`. |
+| 6 | Protezione creazioni (IndexedDB) | Fatto | Database `teresa-personal` versione 1 e store `images` invariati. Viene richiesta la memoria persistente (`navigator.storage.persist`), in modo silenzioso. |
+| 7 | Titoli semplici, diciture 8.3-beta | Fatto | Titoli come "Gatto · conta" e "Gatto · conta · 2", senza "laboratorio 46". Home: "8.3 beta" e "3.150 schede create da 66 disegni originali". Il contatore mostra l'età attiva. Tolto "· 8.1" dalla finestra di stampa. |
+| 8 | Installazione, offline, dedica, funzioni esistenti | Fatto nel codice | Schermata di benvenuto con installazione, dedica, pulsante Esci, AI, creazioni e stampa multipla sono invariati. Il service worker è identico salvo il nome della cache. L'offline non è stato provato qui: vedi il rapporto dei test. |
+| 9 | Cache `teresa-v83-beta` | Fatto | |
 
-Verifiche eseguite: node --check su tutti gli script inline estratti e sul service worker; controllo integrità ZIP. Nessun test browser o dispositivo reale. Non è una release di produzione.
+## Come funziona la migrazione dei preferiti
+L'ordine delle 3.150 schede è lo stesso della 8.2 e della alpha4 (verificato automaticamente), quindi l'indice *i* della 8.2 corrisponde a `data[i].id`. Esempi verificati:
 
-## Collaudo alpha richiesto
-- Installare su ambiente separato HTTPS; verificare avvio online, riapertura in modalità aereo e installazione con asset opzionale assente.
-- Verificare attività cinque stelle con filtro 5 anni; ricerca, paginazione, preferiti e navigazione.
-- Verificare stampa A4/A5/A6, annullamento, seconda stampa; condivisione PNG/PDF e salvataggio offline.
-- Verificare dialog e chiusura, anche simulando showModal assente; verificare creazioni e preferiti preesistenti.
-- Ripetere su Safari/iOS e Chrome/Android, browser e PWA installata.
+| Indice 8.2 | Titolo 8.2 | Nuovo ID | Titolo beta |
+|---|---|---|---|
+| 0 | Albero di Natale | `base-01` | Albero di Natale |
+| 25 | Pallina grande | `nat-14` | Pallina grande |
+| 200 | Coccinella – ripassa il contorno | `mot-14-ripassa-il-contorno` | Coccinella · ripassa il contorno |
+| 1500 | Riccio tra le foglie – Collega le coppie 4 · laboratorio 4 | `lab-04-28` | Riccio tra le foglie · coppie · 4 |
+| 3149 | Farfalla – attività 5 anni | `eta-50-5` | Farfalla · scheda 5 anni |
 
-## 8.3-alpha2 — completamento 3 e 7
-- 3: implementato nel codice: append di massimo 48 elementi con DocumentFragment; reset su filtri e ricerca; cache SVG per ID e fascia d'età, riutilizzata anche nel visualizzatore. Nessun test browser eseguito.
-- 7: implementato nel codice: focus iniziale, ciclo Tab/Maiusc+Tab, Esc, isolamento dei fratelli del dialog e dei suoi antenati tramite inert oppure aria-hidden e pointer-events, ripristino degli attributi e del focus. Da verificare con tastiera e tecnologie assistive reali.
-- Gli stati parziali sopra descrivono alpha1 e sono superati dalle modifiche alpha2, non da un collaudo reale.
-
-### Punto 2 — estratti 8.2 / alpha2
-Prima (estratto del ramo finale di ageArt):
-```js
-return `<g transform="translate(24 12) scale(.84)">${d[3]}</g>`+star(28,270)+star(272,270);
-```
-Dopo (estratti):
-```js
-if(!a||d[4]||d[2].length===1)return d[3];
-// ... rami 3 e 4 ...
-return d[3];
-```
-### Punto 4 — estratti 8.2 / alpha2
-Prima:
-```js
-im.decode().then(()=>{window.print();style.remove();document.body.classList.remove('print8')});
-```
-Dopo (estratti di printReady):
-```js
-window.addEventListener('afterprint',clean);
-timer=setTimeout(clean,180000);
-try{window.print()}catch(e){clean();alert('Stampa non disponibile')}
-```
-### Punto 1 — precache esatto
-Obbligatori: `./`, `./index.html`. Se uno fallisce, l'installazione del nuovo worker fallisce; il precedente worker attivo non viene sostituito.
-Facoltativi: `./manifest.webmanifest`, `./icon-192.png`, `./icon-512.png`, `./icon-maskable.png`. Un errore di download viene ignorato individualmente; il worker può installarsi, ma l'asset mancante non sarà disponibile offline e può compromettere l'installabilità PWA. Cache: teresa-v83-alpha2.
-### Punto 14 — compatibilità dati
-Verificato staticamente: lettura JSON da localStorage `teresa-fav`, apertura IndexedDB `teresa-personal` versione 1, store `images` con keyPath `id` e autoIncrement. Nessuna migrazione o modifica dello schema. La lettura di dati reali preesistenti non è stata collaudata. La migrazione ID resta nel blocco 2.
-### Inventario (byte, dimensioni non compresse)
-- icon-192.png: 1313 byte
-- icon-512.png: 3668 byte
-- icon-maskable.png: 9456 byte
-- index.html: 59523 byte
-- manifest.webmanifest: 576 byte
-- sw.js: 839 byte
-- CHANGELOG.md: 4588 byte
-
-## 8.3-alpha3 — correzioni 2, 5 e 7
-- 2: filtro 3 anni: stroke-width 5 per istruzioni che iniziano con Colora e schede senza istruzione; anche il tratto esplicito 6 delle attività viene portato a 5. Nessuna aggiunta di elementi per 5 anni. Conteggi invariati.
-- 5: debounce 300 ms per titolo, istruzione, data e nomi; invalidazione immediata dei file precedenti e delle generazioni asincrone in corso. Le opzioni non testuali restano immediate. Condivisione file consentita anche offline se canShare lo permette; messaggio aggiuntivo offline senza dichiarare un salvataggio non confermato.
-- 7: dialog:not([open]) nascosto via CSS; eliminati display inline in apertura/chiusura fallback. Viewer aperto mantiene flex. Gestione focus alpha2 invariata.
-- Cache incrementata a teresa-v83-alpha3 per distribuire la correzione. Nessuna modifica alle chiavi dati.
-- Verificato: sintassi JavaScript degli script e del worker, integrità ZIP. Da verificare: resa SVG, debounce e condivisione offline, dialog fallback su browser e dispositivi reali. Nessun collaudo mobile eseguito.
+## Cambiamenti da conoscere
+- Contare, coppie, intruso, sequenze, percorsi, grande e piccolo, tavolozza e decora ora valgono anche per 3 anni, con quantità adatte. Con il filtro 3 anni le schede passano da 1.817 a 2.788. Con 4 e 5 anni restano 3.050.
+- Le schede di una stessa voce cambiano aspetto a seconda dell'età scelta nel filtro. Con "Tutte le età" si vede la versione per 4 anni.
+- Funzioni rimosse perché inutilizzate: `legacyPrintSheet` e la vecchia `ageArt`.
