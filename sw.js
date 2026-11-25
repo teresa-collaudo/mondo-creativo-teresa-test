@@ -1,4 +1,4 @@
-const C='teresa-v83-alpha3';
+const C='teresa-v83-alpha4';
 const core=['./','./index.html'];
 const optional=['./manifest.webmanifest','./icon-192.png','./icon-512.png','./icon-maskable.png'];
 self.addEventListener('install',e=>e.waitUntil((async()=>{const c=await caches.open(C);await c.addAll(core);await Promise.all(optional.map(x=>c.add(x).catch(()=>{})));await self.skipWaiting()})()));
