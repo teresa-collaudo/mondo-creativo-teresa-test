@@ -1,3 +1,13 @@
+# Il mondo creativo di Teresa — 8.3-beta6
+
+| Novità | Dettagli |
+|---|---|
+| Illustrazioni diverse per età | Con il filtro **3 anni** le illustrazioni mostrano, stampano e scaricano una versione a **linee molto più spesse**, senza i dettagli minuscoli, con un'istruzione dedicata: 143 su 155. Le 12 scene troppo dense restano per 4–5 anni. Con 4 anni, o con «Tutte le età», si vede il disegno normale. |
+| In arrivo (gratis) | Versioni **disegnate apposta** con Cloudflare: semplici per 3 anni, scene ricche per 5 anni. Si generano di notte, nella quota gratuita giornaliera (circa 60 immagini per notte). |
+| Cache | `teresa-v83-beta6`, 298 immagini. |
+
+---
+
 # Il mondo creativo di Teresa — 8.3-beta5
 
 Base: 8.3-beta4. Cache `teresa-v83-beta5`. Il repository ufficiale non è stato modificato.
