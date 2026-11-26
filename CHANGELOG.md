@@ -1,3 +1,17 @@
+# Il mondo creativo di Teresa — 8.3-beta5
+
+Base: 8.3-beta4. Cache `teresa-v83-beta5`. Il repository ufficiale non è stato modificato.
+
+| Novità | Dettagli |
+|---|---|
+| 50 illustrazioni gratuite | Generate con **Cloudflare Workers AI** (modello FLUX.1 schnell), nella quota gratuita giornaliera: costo 0 €. Ripulite in bianco e nero. |
+| Temi | Mestieri, mezzi di trasporto, fiabe classiche (Cappuccetto Rosso, i tre porcellini, castello, draghetto, principessa), frutta e verdura, insetti, giochi, **i 12 mesi dell'anno** (Carnevale, festa del papà e della mamma, mare, montagna, castagne, letterina di Natale…), altri animali. |
+| Controllo qualità | 9 immagini rigenerate: scritte («SCHOOL»), una firma, anatomie strane, colori rosati, e 2 richieste bloccate per errore dal filtro di Cloudflare. |
+| Totale | 3.305 schede, di cui 155 disegni illustrati (50 Gemini, 55 Openclipart, 50 Cloudflare). Gli ID precedenti non cambiano. |
+| Offline | 155 immagini, circa 5 MB, salvate alla prima apertura. |
+
+---
+
 # Il mondo creativo di Teresa — 8.3-beta4
 
 Base: 8.3-beta3. Cache `teresa-v83-beta4`. Il repository ufficiale non è stato modificato.

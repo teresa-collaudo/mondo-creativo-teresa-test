@@ -1,3 +1,10 @@
+# Rapporto dei test — 8.3-beta5
+
+- **Integrazione: 9/9 superati.** Catalogo di 3.305 schede, con le prime 3.255 identiche alla beta4; ID univoci; tutti i file presenti; stampa; 155 immagini in cache offline; nessun errore.
+- **Regressione:** browser 85/85.
+
+---
+
 # Rapporto dei test — 8.3-beta4
 
 - **Openclipart: 9/9 superati.** Catalogo di 3.255 schede, con le prime 3.200 identiche alla beta3; ID univoci; 55 file presenti; ricerca «numero» con 6 risultati; immagini caricate; stampa; 105 immagini in cache offline; nessun errore.
