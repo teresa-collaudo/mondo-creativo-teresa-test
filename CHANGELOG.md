@@ -1,3 +1,18 @@
+# Il mondo creativo di Teresa — 8.3-beta2
+
+Base: 8.3-beta, pubblicata sul sito di prova. Cache `teresa-v83-beta2`. Il repository ufficiale non è stato modificato.
+
+| Novità | Stato | Dettagli |
+|---|---|---|
+| «Le mie immagini» (prima «Creazioni») | Fatto | Pulsante «📥 Aggiungi immagini» e messaggio quando la sezione è vuota. Ogni immagine ha: Stampa e personalizza, Rendi da colorare, Visualizza, Scarica, Elimina. Le immagini restano solo sul dispositivo. |
+| Stampa personalizzata delle proprie immagini | Fatto | Stesso motore delle schede: titolo (preso dal nome del file), istruzione, data, nomi dei bambini, 1×A4, 2×A5, 4×A6, PDF/PNG, condivisione. «Schede differenti» viene disattivato. |
+| Rendi da colorare | Fatto | Trasforma un'immagine (anche a colori o con sfondo grigio) in bianco e nero netto. Livello di nero regolabile, opzione «Linee più spesse». Salva una nuova copia e conserva l'originale. |
+| Cerca idee su Pinterest | Fatto | Apre Pinterest sulla ricerca «disegni da colorare <tema> scuola infanzia». L'app non preleva immagini da Pinterest: Teresa le scarica e le aggiunge lei. |
+| Condividi → Teresa (Android) | Fatto nel codice, verificato in Chromium | Dalla Galleria si può condividere un'immagine direttamente all'app installata, che la salva in «Le mie immagini». Un link condiviso da solo (per esempio da Pinterest) mostra come procedere. Su iPhone non è supportato dal sistema. |
+| Assistente AI per Gemini | Fatto | Collegamento «Apri Gemini». Richieste riscritte in stile «libro da colorare», con dettaglio diverso per 3, 4 e 5 anni e personaggi originali. |
+
+---
+
 # Il mondo creativo di Teresa — 8.3-beta
 
 Base: **8.3-alpha4** presa dal repository ufficiale in sola lettura (cache `teresa-v83-alpha4`).

@@ -1,3 +1,20 @@
+# Rapporto dei test — 8.3-beta2 (26/11/2026)
+
+**Nuove funzioni: 26/26 superati** (Chromium, telefono emulato 412×915, servizio locale con service worker attivo):
+- Aggiunta di un'immagine; pulsanti presenti; messaggio a sezione vuota.
+- «Rendi da colorare»: risultato solo bianco e nero, sfondo grigio diventato bianco, contorno nero conservato, finestra senza scorrimento, salvataggio come nuova immagine senza perdere l'originale.
+- Stampa di un'immagine personale: titolo dal nome del file, formato 4×A6 con i nomi MARIO e GIULIA, anteprima intera.
+- Pinterest: indirizzo di ricerca corretto. Richiesta per Gemini adatta a 5 anni.
+- **Service worker reale:** attivo, cache `teresa-v83-beta2`. La condivisione di un'immagine arriva in «Le mie immagini» con il messaggio «1 immagine aggiunta». La condivisione di un solo link è gestita.
+- **Offline reale** (rete disattivata): l'app si apre, archivio e schede disponibili, immagini personali disponibili.
+- Nessun errore JavaScript.
+
+**Regressione sulla beta2:** catalogo 17/17, browser 85/85, telefono 18/18.
+
+**Da verificare su dispositivo:** il menu «Condividi» di Android mostra «Teresa» solo con l'app installata. Chrome può impiegare fino a un giorno ad aggiornare l'app già installata; in alternativa si disinstalla e si reinstalla. Su iPhone questa funzione non esiste.
+
+---
+
 # Rapporto dei test — 8.3-beta
 
 Elenca solo test eseguiti davvero, il 25/11/2026, sulla build finale. Sono stati eseguiti in Node.js (catalogo) e in Chromium headless con Playwright, servendo la beta in locale (http://127.0.0.1).
