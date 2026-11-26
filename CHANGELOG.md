@@ -1,3 +1,19 @@
+# Il mondo creativo di Teresa — 8.3-beta4
+
+Base: 8.3-beta3. Cache `teresa-v83-beta4`. Il repository ufficiale non è stato modificato.
+
+| Novità | Dettagli |
+|---|---|
+| 55 disegni gratuiti | Scelti a mano tra 310 candidati di **Openclipart**, tutti di pubblico dominio (CC0: uso libero, anche nell'app). Scaricati in formato vettoriale, convertiti ad alta risoluzione e ripuliti in bianco e nero. Scartati quelli con scritte, colori, temi non adatti, o il cui file non corrispondeva all'anteprima. |
+| Categorie | Animali, Natale, Stagioni, Festività, Lavoretti, Emozioni, Numeri e forme. Ci sono anche 6 numeri decorati (dal 2 al 7) e un «unisci i puntini». |
+| Totale | 3.255 schede, di cui 105 disegni illustrati (50 Gemini + 55 Openclipart). Le schede e gli ID precedenti non cambiano. |
+| Offline | Le 105 immagini (3 MB) vengono salvate alla prima apertura. |
+| Costo | 0 €. |
+
+Crediti: disegni da openclipart.org, pubblico dominio (CC0).
+
+---
+
 # Il mondo creativo di Teresa — 8.3-beta3
 
 Base: 8.3-beta2. Cache `teresa-v83-beta3`. Il repository ufficiale non è stato modificato.
