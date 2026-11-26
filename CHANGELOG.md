@@ -1,3 +1,19 @@
+# Il mondo creativo di Teresa — 8.3-beta3
+
+Base: 8.3-beta2. Cache `teresa-v83-beta3`. Il repository ufficiale non è stato modificato.
+
+| Novità | Dettagli |
+|---|---|
+| 50 illustrazioni da colorare | Generate con Gemini 2.5 Flash Image tramite la chiave del progetto. Pulite automaticamente: bianco e nero netto, colori trasformati in bianco, linee più spesse, margini rifilati. 1.6 MB in tutto. |
+| Nuova categoria «🖍 Illustrazioni» | Prima delle categorie, con riquadro in home e sezione «✨ Nuove illustrazioni» al posto di «Disegni consigliati». Età: 3–5 anni per i disegni semplici e medi, 4–5 anni per le scene ricche. |
+| Stampa, PNG, preferiti, link | Le illustrazioni usano tutte le funzioni delle schede: stampa A4/A5/A6 con nomi e data, PDF, PNG, preferiti, link. |
+| Offline | Il service worker salva le 50 illustrazioni alla prima apertura. |
+| Compatibilità | Le illustrazioni sono aggiunte dopo le 3.150 schede: gli ID e i preferiti esistenti non cambiano. Totale: 3.200 schede. |
+| Revisione | 2 immagini rigenerate: la 31, perché aveva scritte in inglese, e la 35, per evitare un personaggio somigliante a uno famoso. |
+| Costo stimato della generazione | 52 immagini × 0,039 $ ≈ 2 $, più le prove iniziali (≤ 0,30 $). |
+
+---
+
 # Il mondo creativo di Teresa — 8.3-beta2
 
 Base: 8.3-beta, pubblicata sul sito di prova. Cache `teresa-v83-beta2`. Il repository ufficiale non è stato modificato.

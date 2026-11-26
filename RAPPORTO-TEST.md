@@ -1,3 +1,13 @@
+# Rapporto dei test — 8.3-beta3
+
+- **Illustrazioni: 19/19 superati.**
+  - Catalogo di 3.200 schede; le prime 3.150 identiche alla beta2 (ID, titolo, categoria); ID univoci; 50 file presenti.
+  - Su PC e telefono: home con 6 illustrazioni, categoria con 50 schede, visualizzatore a pagina intera, anteprima di stampa disegnata, PNG scaricato.
+  - Service worker: 50 illustrazioni in cache; offline visibili.
+- **Regressione:** browser 85/85; telefono 18/18; «Le mie immagini», condivisione e offline 26/26.
+
+---
+
 # Rapporto dei test — 8.3-beta2 (26/11/2026)
 
 **Nuove funzioni: 26/26 superati** (Chromium, telefono emulato 412×915, servizio locale con service worker attivo):
