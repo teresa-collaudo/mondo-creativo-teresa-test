@@ -1,3 +1,14 @@
+# Il mondo creativo di Teresa — 8.3-beta7
+
+| Novità | Dettagli |
+|---|---|
+| 8 alberi di Natale a cuori | Disegnati apposta per l'app: albero di cuori grandi (3 anni), abete decorato con i cuori (4 anni), albero di 15 cuori con regali (5 anni), albero a goccia con palline a cuore, albero di cuori nel vaso in 3 livelli, albero «conta da 1 a 10». |
+| 17 disegni Openclipart (CC0) | Scelti dall'elenco proposto da ChatGPT dopo un controllo visivo, uno per uno; 13 scartati e 10 già presenti. Albero con palline, pupazzi di neve, inverno, foglia, ghianda, bambino tra le foglie, gallina, formica, fiori, aeroplano, autobus. |
+| Versioni per 3 anni | 15 dei nuovi disegni hanno anche la versione a linee grosse. |
+| Totale | 3.330 schede, di cui 180 disegni illustrati. Cache `teresa-v83-beta7`. |
+
+---
+
 # Il mondo creativo di Teresa — 8.3-beta6
 
 | Novità | Dettagli |
